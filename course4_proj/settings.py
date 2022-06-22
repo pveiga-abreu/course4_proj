@@ -37,7 +37,8 @@ class Dev(Configuration):
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SAMESITE = "None"
     SESSION_COOKIE_SAMESITE = "None"
-
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    ADMINS = [("Paulo", "paulo@example.com")]
     CELERY_RESULT_BACKEND = "django-db"
     CELERY_BROKER_URL = "redis://localhost:6379/0"
 
@@ -61,6 +62,7 @@ class Dev(Configuration):
         'django.middleware.common.CommonMiddleware',
         # 'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.Messagiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
