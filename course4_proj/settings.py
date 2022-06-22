@@ -54,6 +54,7 @@ class Dev(Configuration):
         'movies',
 				'gh',
 				'django_celery_results',
+				'django_celery_beat',
     ]
 
     MIDDLEWARE = [
@@ -62,7 +63,6 @@ class Dev(Configuration):
         'django.middleware.common.CommonMiddleware',
         # 'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.Messagiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
